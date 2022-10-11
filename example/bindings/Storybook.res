@@ -55,16 +55,16 @@ module Notes = {
 }
 
 module Knobs = {
-  @val @module("@storybook/addon-knobs/react")
+  @val @module("@storybook/addon-knobs")
   external withKnobs: Main.decorator = "withKnobs"
 
-  @val @module("@storybook/addon-knobs/react")
+  @val @module("@storybook/addon-knobs")
   external extText: (string, Js.null_undefined<string>) => string = "text"
 
   let text = (~label: string, ~defaultValue: option<string>=?, ()) =>
     extText(label, Js.Nullable.fromOption(defaultValue))
 
-  @val @module("@storybook/addon-knobs/react")
+  @val @module("@storybook/addon-knobs")
   external extBoolean: (string, bool) => bool = "boolean"
 
   let boolean = (~label: string, ~defaultValue=false, ()) => extBoolean(label, defaultValue)
@@ -76,19 +76,19 @@ module Knobs = {
     step: float,
   }
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external number: (~label: string, ~defaultValue: float, ~range: rangeConfig=?, unit) => float =
     "number"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external object_: (~label: string, ~defaultValue: 'a, unit) => 'a = "object"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external color: (~label: string, ~defaultValue: string=?, unit) => string = "color"
 
   type selectConfig<'a> = 'a
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external select: (
     ~label: string,
     ~options: selectConfig<'a>,
@@ -96,7 +96,7 @@ module Knobs = {
     unit,
   ) => string = "select"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external selectFromArray: (
     ~label: string,
     ~options: array<'a>,
@@ -104,7 +104,7 @@ module Knobs = {
     unit,
   ) => 'a = "select"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external selectFromDict: (
     ~label: string,
     ~options: Js.Dict.t<'a>,
@@ -112,11 +112,11 @@ module Knobs = {
     unit,
   ) => 'a = "select"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external selectFromAny: (~label: string, ~options: 'a, ~defaultValue: string, unit) => 'a =
     "select"
 
-  @module("@storybook/addon-knobs/react")
+  @module("@storybook/addon-knobs")
   external extDate: (string, Js.null_undefined<Js_date.t>) => string = "date"
 
   let date = (~label: string, ~defaultValue: option<Js_date.t>=?, ()) =>
@@ -124,7 +124,7 @@ module Knobs = {
 
   type button
 
-  @val @module("@storybook/addon-knobs/react")
+  @val @module("@storybook/addon-knobs")
   external extButton: (string, ReactEvent.Mouse.t => unit) => button = "button"
 
   let button = (~label: string, ~handler: ReactEvent.Mouse.t => unit, ()) =>

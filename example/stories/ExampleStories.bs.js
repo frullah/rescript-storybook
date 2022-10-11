@@ -6,7 +6,7 @@ import * as MyButton from "../src/MyButton.bs.js";
 import * as Storybook from "../bindings/Storybook.bs.js";
 import * as React$1 from "@storybook/react";
 import * as AddonActions from "@storybook/addon-actions";
-import * as React$2 from "@storybook/addon-knobs/react";
+import * as React$2 from "@storybook/addon-knobs";
 
 var _module = module;
 

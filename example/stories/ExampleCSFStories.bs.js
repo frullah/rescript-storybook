@@ -4,7 +4,7 @@ import * as React from "react";
 import * as MyButton from "../src/MyButton.bs.js";
 import * as Storybook from "../bindings/Storybook.bs.js";
 import * as AddonActions from "@storybook/addon-actions";
-import * as React$1 from "@storybook/addon-knobs/react";
+import * as React$1 from "@storybook/addon-knobs";
 
 var $$default = Storybook.CSF.make("Reason CSF Story", undefined, [React$1.withKnobs], undefined, undefined, undefined, undefined);
 

@@ -4,7 +4,7 @@ import * as List from "rescript/lib/es6/list.js";
 import * as Belt_Option from "rescript/lib/es6/belt_Option.js";
 import * as React from "@storybook/react";
 import * as Js_null_undefined from "rescript/lib/es6/js_null_undefined.js";
-import * as React$1 from "@storybook/addon-knobs/react";
+import * as React$1 from "@storybook/addon-knobs";
 
 var Story = {};
 
